@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Ollama Benchmarking</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ollama Chat</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/static/chat.html" class="active">Chat</a></li>
+                    <li><a href="/static/evaluation.html">Evaluations</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="chat-container">
+            <div class="sidebar">
+                <div class="model-selector">
+                    <h3>Select Model</h3>
+                    <select id="model-select">
+                        <option value="">Loading models...</option>
+                        <!-- Models will be populated dynamically -->
+                    </select>
+                </div>
+                <div class="chat-info">
+                    <h3>Chat Information</h3>
+                    <p>Model: <span id="current-model">llama2</span></p>
+                    <p>Messages: <span id="message-count">0</span></p>
+                    <button id="clear-chat" class="btn secondary">Clear Chat</button>
+                </div>
+            </div>
+            <div class="chat-main">
+                <div id="chat-messages" class="chat-messages">
+                    <div class="system-message">
+                        <p>Start chatting with your selected Ollama model!</p>
+                    </div>
+                    <!-- Messages will be added here dynamically -->
+                </div>
+                <div class="chat-input">
+                    <textarea id="message-input" placeholder="Type your message here..."></textarea>
+                    <button id="send-button" class="btn primary">Send</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Ollama Benchmarking Platform</p>
+        </footer>
+    </div>
+    <script src="/static/js/chat.js"></script>
+</body>
+</html> 

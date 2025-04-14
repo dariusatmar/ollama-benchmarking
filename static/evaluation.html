@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluations - Ollama Benchmarking</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ollama Evaluations</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/static/chat.html">Chat</a></li>
+                    <li><a href="/static/evaluation.html" class="active">Evaluations</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="evaluation-container">
+            <div class="evaluation-form">
+                <h2>Run Benchmark Evaluation</h2>
+                <div class="form-group">
+                    <label for="eval-model-select">Select Model</label>
+                    <select id="eval-model-select">
+                        <option value="">Loading models...</option>
+                        <!-- Models will be populated dynamically by evaluation.js -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="benchmark-select">Select Benchmark</label>
+                    <select id="benchmark-select">
+                        <!-- Will be populated from API -->
+                        <option value="loading">Loading benchmarks...</option>
+                    </select>
+                </div>
+                <div class="benchmark-description" id="benchmark-description">
+                    Select a benchmark to see its description.
+                </div>
+                <button id="run-evaluation" class="btn primary">Run Evaluation</button>
+            </div>
+            <div class="evaluation-results">
+                <h2>Results</h2>
+                <div id="results-status" class="results-status">No evaluation running</div>
+                <div id="results-container" class="results-container">
+                    <!-- Results will be displayed here -->
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Ollama Benchmarking Platform</p>
+        </footer>
+    </div>
+    <script src="/static/js/evaluation.js"></script>
+</body>
+</html> 

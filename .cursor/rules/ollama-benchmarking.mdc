@@ -1,0 +1,108 @@
+---
+description: FastAPI web app development
+globs: *.py, *.js, *.css
+---
+You are an expert in Python, FastAPI, OpenAI SDK, and full-stack web application development.
+
+### Project Context
+This project is an Ollama Benchmarking application that allows users to:
+- Chat with Ollama models through an API interface
+- Run evaluations and benchmarks on Ollama models
+- Use Weave to track metrics and logs
+- Utilize a web-based frontend for interaction
+
+### Key Principles
+
+- Write concise, technical responses with accurate Python examples.
+- Use functional, declarative programming; avoid classes where possible.
+- Prefer iteration and modularization over code duplication.
+- Use descriptive variable names with auxiliary verbs (e.g., `is_active`, `has_permission`).
+- Use lowercase with underscores for directories and files (e.g., `routers/benchmark_routes.py`).
+- Follow PEP 8 style guidelines for Python code.
+- Maintain proper type hints for all functions to ensure type safety.
+
+### Backend Structure (FastAPI)
+
+- Use def for pure functions and async def for asynchronous operations.
+- Use type hints for all function signatures and return values.
+- Use Pydantic models for request and response validation.
+- File structure:
+  - Exported router
+  - Sub-routes
+  - Utilities
+  - Static content
+  - Types (models, schemas)
+- Organize app into logical modules:
+  ```
+  ollama_benchmarking/
+  ├── main.py             # FastAPI app entry point
+  ├── models/             # Pydantic models
+  ├── services/           # Business logic
+  ├── routers/            # API routes
+  ├── utils/              # Utility functions
+  ├── static/             # Static files
+  ```
+
+### FastAPI Best Practices
+
+- Use Pydantic's BaseModel for consistent input/output validation.
+- Use appropriate HTTP methods with path operation decorators (@app.get, @app.post, etc.).
+- Use dependency injection for shared logic like OpenAI clients.
+- Use middleware for logging, error monitoring, and performance optimization.
+- Use HTTPException for expected errors with appropriate status codes and detail messages.
+- Structure JSON responses consistently using Pydantic models.
+- Follow RESTful API design principles.
+
+### Error Handling
+
+- Handle errors and edge cases at the beginning of functions.
+- Use early returns for error conditions to avoid deeply nested if statements.
+- Place the happy path last in the function for improved readability.
+- Avoid unnecessary else statements; use if-return pattern instead.
+- Implement proper error logging.
+- Provide user-friendly error messages.
+
+### OpenAI SDK Integration
+
+- Use a consistent pattern for calling models.
+- Handle common API errors (rate limits, context length, etc.).
+- Implement proper timeout handling.
+- Structure prompts consistently.
+- Add proper validation for model IDs and parameters.
+
+### Weave Integration
+
+- Use Weave decorators consistently for tracking operations.
+- Log relevant metrics (latency, token usage, etc.).
+- Structure logging to be queryable.
+- Track evaluation results with appropriate metadata.
+
+### Frontend Guidelines
+
+- Keep frontend code (HTML, JS, CSS) in the static directory.
+- Use plain JavaScript or simple frameworks for a lightweight interface.
+- Follow semantic HTML best practices.
+- Implement responsive design principles.
+- Use consistent naming conventions for CSS classes.
+- Organize JS code into logical modules:
+  - API client for backend communication
+  - UI components for rendering
+  - Event handlers for user interaction
+
+### Performance Optimization
+
+- Minimize blocking I/O operations; use asynchronous operations for all external API calls.
+- Implement caching for static and frequently accessed data.
+- Optimize data serialization and deserialization with Pydantic.
+- Use lazy loading techniques for large datasets and substantial API responses.
+- Limit unnecessary API calls on the frontend.
+- Implement proper loading states for user feedback.
+
+### Dependencies
+
+- FastAPI
+- Pydantic
+- OpenAI SDK
+- Weave for tracking
+- Environmental variable management
+- Static file serving

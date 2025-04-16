@@ -1,15 +1,15 @@
 /* Base styles */
 :root {
-    --primary-color: #4a6fa5;
-    --secondary-color: #6c757d;
-    --background-color: #f8f9fa;
-    --card-bg: #ffffff;
-    --text-color: #333333;
-    --border-color: #dee2e6;
-    --success-color: #28a745;
-    --error-color: #dc3545;
-    --message-user-bg: #e9f5ff;
-    --message-bot-bg: #f0f0f0;
+    --primary-color: #111111;
+    --secondary-color: #666666;
+    --background-color: #ffffff;
+    --card-bg: #f5f5f5;
+    --text-color: #222222;
+    --border-color: #cccccc;
+    --success-color: #222222;
+    --error-color: #666666;
+    --message-user-bg: #f0f0f0;
+    --message-bot-bg: #eaeaea;
 }
 
 * {
@@ -59,13 +59,13 @@ nav ul li a {
     color: var(--text-color);
     font-weight: 500;
     padding: 5px 10px;
-    border-radius: 4px;
+    border-radius: 0;
     transition: background-color 0.3s;
 }
 
 nav ul li a:hover, nav ul li a.active {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--text-color);
 }
 
 main {
@@ -85,7 +85,7 @@ footer {
     display: inline-block;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 0;
     cursor: pointer;
     font-weight: 500;
     text-decoration: none;
@@ -98,20 +98,20 @@ footer {
 
 .btn.primary {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--text-color);
 }
 
 .btn.secondary {
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--text-color);
 }
 
 /* Welcome page */
 .welcome-card {
     background-color: var(--card-bg);
-    border-radius: 8px;
+    border-radius: 0;
     padding: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
     text-align: center;
     max-width: 600px;
     margin: 60px auto;
@@ -138,14 +138,14 @@ footer {
     display: flex;
     height: calc(100vh - 180px);
     background-color: var(--card-bg);
-    border-radius: 8px;
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 .sidebar {
     width: 250px;
-    background-color: #f0f4f8;
+    background-color: #ececec;
     padding: 20px;
     border-right: 1px solid var(--border-color);
 }
@@ -163,7 +163,7 @@ footer {
 select {
     width: 100%;
     padding: 8px;
-    border-radius: 4px;
+    border-radius: 0;
     border: 1px solid var(--border-color);
     background-color: white;
 }
@@ -183,13 +183,13 @@ select {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
-    background-color: #f9f9f9;
+    background-color: #fafafa;
 }
 
 .message {
     margin-bottom: 15px;
     padding: 10px 15px;
-    border-radius: 8px;
+    border-radius: 0;
     max-width: 80%;
 }
 
@@ -222,7 +222,7 @@ select {
     flex: 1;
     padding: 10px;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: 0;
     resize: none;
     height: 60px;
     margin-right: 10px;
@@ -237,9 +237,9 @@ select {
 
 .evaluation-form, .evaluation-results {
     background-color: var(--card-bg);
-    border-radius: 8px;
+    border-radius: 0;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 .evaluation-form h2, .evaluation-results h2 {
@@ -258,9 +258,9 @@ select {
 }
 
 .benchmark-description {
-    background-color: #f0f4f8;
+    background-color: #ececec;
     padding: 15px;
-    border-radius: 4px;
+    border-radius: 0;
     margin-bottom: 20px;
     min-height: 80px;
 }
@@ -268,21 +268,21 @@ select {
 .results-status {
     padding: 10px;
     margin-bottom: 15px;
-    border-radius: 4px;
-    background-color: #f0f4f8;
+    border-radius: 0;
+    background-color: #ececec;
 }
 
 .results-status.running {
-    background-color: #fff3cd;
+    background-color: #e0e0e0;
 }
 
 .results-status.success {
-    background-color: #d4edda;
+    background-color: #e0e0e0;
     color: var(--success-color);
 }
 
 .results-status.error {
-    background-color: #f8d7da;
+    background-color: #e0e0e0;
     color: var(--error-color);
 }
 
@@ -294,13 +294,13 @@ select {
 .result-item {
     margin-bottom: 20px;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: 0;
     overflow: hidden;
 }
 
 .result-prompt {
     padding: 10px;
-    background-color: #f0f4f8;
+    background-color: #ececec;
     border-bottom: 1px solid var(--border-color);
     font-weight: 500;
 }

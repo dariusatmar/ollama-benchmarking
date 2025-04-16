@@ -36,7 +36,7 @@ body {
 
 header {
     padding: 20px 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 3px solid #111;
     margin-bottom: 20px;
 }
 
@@ -76,34 +76,52 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
-    border-top: 1px solid var(--border-color);
+    border-top: 3px solid #111;
     color: var(--secondary-color);
 }
 
 /* Button styles */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    border: none;
+    padding: 12px 28px;
+    border: 2px solid #111;
     border-radius: 0;
+    background: linear-gradient(90deg, #222 60%, #444 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 0 #111, 0 0 0 transparent;
+    transition: all 0.15s cubic-bezier(.4,0,.2,1);
     cursor: pointer;
-    font-weight: 500;
-    text-decoration: none;
-    transition: opacity 0.3s;
+    outline: none;
 }
 
-.btn:hover {
-    opacity: 0.9;
+
+.btn:hover, .btn:focus {
+    background: linear-gradient(90deg, #111 60%, #222 100%);
+    color: #fff;
+    border-color: #222;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transform: translateY(-2px) scale(1.03);
+    opacity: 1;
 }
+
 
 .btn.primary {
+    background: linear-gradient(90deg, #111 60%, #444 100%);
+    color: #fff;
+    border: 2px solid #111;
+}
     background-color: var(--primary-color);
     color: var(--text-color);
 }
 
 .btn.secondary {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background: linear-gradient(90deg, #333 60%, #666 100%);
+    color: #fff;
+    border: 2px solid #333;
 }
 
 /* Welcome page */
@@ -147,7 +165,7 @@ footer {
     width: 250px;
     background-color: #ececec;
     padding: 20px;
-    border-right: 1px solid var(--border-color);
+    border-right: 3px solid #111;
 }
 
 .model-selector, .chat-info {
@@ -215,7 +233,7 @@ select {
 .chat-input {
     display: flex;
     padding: 15px;
-    border-top: 1px solid var(--border-color);
+    border-top: 3px solid #111;
 }
 
 .chat-input textarea {
